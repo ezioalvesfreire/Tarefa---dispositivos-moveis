@@ -16,30 +16,25 @@ public class PopulacaoMundial {
 
         int diferenca = calculoDiferenca(populacaoEm, anoRef);
 
-        //  populacaoEh = calculoPopulacao(populacaoAtual);
         double populacaoEh = calculoPopulacao(diferenca, populacaoAtual);
 
-        // int populacao = anoAtual - populacaoEm;
-        System.out.println("a população mundial daqui" + diferenca + "anos");
+        System.out.println("a população mundial daqui " + diferenca + " anos");
 
         System.out.println("ou seja em: " + populacaoEm + " será de:" + populacaoEh + "");
 
     }
 
-    public static int calculoDiferenca(int populacaoEm, int anoRef) { // int populacaoEm, int anoRef
+    public static int calculoDiferenca(int populacaoEm, int anoRef) {
 
-        //  int diferenca =
         return populacaoEm - anoRef;
     }
 
-    public static double calculoPopulacao(double diferenca, double populacaoAtual) { // int populacaoEm, int anoRef,  int populacaoAtual
+    public static double calculoPopulacao(double diferenca, double populacaoAtual) {
 
-        // double populacaoEh = 0;
         for (int i = 1; i <= diferenca; i++) {
-            //System.out.printf("teste\n",teste, i);
-            populacaoAtual += populacaoAtual * 0.5 / 100;
 
-            //System.out.printf("Total população %.0f pelo %s anos\n",populacaoAtual,i);
+            populacaoAtual += populacaoAtual * 1.05 / 100;
+
         }
 
         double populacaoEh = populacaoAtual;
