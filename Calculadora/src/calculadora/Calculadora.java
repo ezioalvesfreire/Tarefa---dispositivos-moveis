@@ -44,6 +44,13 @@ public class Calculadora {
         double divisao = calculoDivisao(num1, num2);
         System.out.println("A divisão --------------- " + num1 + " / " + num2 + " = " + divisao);
         
+        if(num1 > num2){
+            System.out.println(num1 + ": é maior");
+        }else if(num2 > num1){
+            System.out.println(num2 + ": é maior");
+        }else{
+            System.out.println(num1 + " e " + num2 + " são iguais");
+        }
      
     }
         public static double calculoSoma(double num1, double num2){
